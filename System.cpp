@@ -16,7 +16,13 @@ private:
     std::vector<torqueComp> torqueList;  // Torque list
 
 public:
-    System(std::vector<forceComp> forceList, std::vector<torqueComp> torqueList)
+    System(std::vector<forceComp> forceList,
+        std::vector<float> iniPos,
+        std::vector<float> iniVel,
+        std::vector<torqueComp> torqueList,
+        std::vector<float> iniRotPos,
+        std::vector<float> iniRotVel,
+        )
 }
 
 
