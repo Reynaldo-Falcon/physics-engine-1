@@ -1,3 +1,4 @@
+#include "System.h"
 #include <vector>
 
 //--------------------------
@@ -7,29 +8,49 @@
 class System
 {
 private:
+
     // --- Forces ---
-    std::vector<float> forceComp;    // Force Components
-    std::vector<forceComp> forceList;    // Force list
+    std::vector<std::vector<float>> forceList;    // Force list
 
     // --- Torques ---
-    std::vector<float> torqueComp;   // Torque Components
-    std::vector<torqueComp> torqueList;  // Torque list
+    std::vector<std::vector<float>> torqueList;  // Torque list
+
+    // Translational Position and Velocity
+    std::vector<float> pos;
+    std::vector<float> vel;
+
+    // Angular Position and Velocity
+    std::vector<float> angPos;
+    std::vector<float> angVel;
 
 public:
-    System(std::vector<forceComp> forceList,
+
+    System(std::vector<std::vector<float>> forceList,
         std::vector<float> iniPos,
         std::vector<float> iniVel,
-        std::vector<torqueComp> torqueList,
-        std::vector<float> iniRotPos,
-        std::vector<float> iniRotVel,
+        std::vector<std::vector<float>> torqueList,
+        std::vector<float> iniAngPos,
+        std::vector<float> iniAngVel
         )
+    {
+        this->forceList = forceList;
+        pos = iniPos;
+        vel = iniVel;
+        this->torqueList = torqueList,
+        angPos = iniAngPos;
+        angVel = iniAngVel;
+    }
+
+    // Setters
+    void setPos(std::vector<float> pos) {this->pos = pos;}
+    void setVel(std::vector<float> vel) {this->vel = vel;}
+    void setAngPos(std::vector<float> angPos) {this->angPos = angPos;}
+    void setAngVel(std::vector<float> angVel) {this->angVel = angVel;}
+
+    // Getters
+    std::vector<float> getPos() {return pos;}
+    std::vector<float> getVel() {return vel;}
+    std::vector<float> getAngPos() {return angPos;}
+    std::vector<float> getAngVel() {return angVel;}
+
 }
-
-
-// Make constructor for a system that includes the forces and torques that act on it, and its initial position and velocity.
-// This will allow me to update velocity and position accordingly
-void main()
-{
-
-}
-
