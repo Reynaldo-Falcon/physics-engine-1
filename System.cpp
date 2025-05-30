@@ -8,15 +8,15 @@ class System
 {
 private:
     // --- Forces ---
-    vector<float> forceComp;    // Force Components
-    vector<forceComp> forceList;    // Force list
+    std::vector<float> forceComp;    // Force Components
+    std::vector<forceComp> forceList;    // Force list
 
     // --- Torques ---
-    vector<float> torqueComp;   // Torque Components
-    vector<torqueComp> torqueList;  // Torque list
+    std::vector<float> torqueComp;   // Torque Components
+    std::vector<torqueComp> torqueList;  // Torque list
 
 public:
-    System(vector<forceComp> forceList, vector<torqueComp> torqueList)
+    System(std::vector<forceComp> forceList, std::vector<torqueComp> torqueList)
 }
 
 
