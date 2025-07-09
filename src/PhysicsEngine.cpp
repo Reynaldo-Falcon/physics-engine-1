@@ -14,6 +14,7 @@ void printVector(std::vector<float> x)
 
 int main()
 {
+    std::cout << "Test" << std::endl;
     int dimensions = 1;
     std::vector<std::vector<float>> list(2, std::vector<float>(dimensions, 0.0f));  // Torque list
 
@@ -28,21 +29,21 @@ int main()
 
     System sys1(list2,floatVec,floatVec,list,floatVec,floatVec);
 
-    std::cout << "hi frfr" << std::endl;
+    // std::cout << "hi frfr" << std::endl;
 
-    // Print elements in a vector
+    // // Print elements in a vector
 
-    std::cout<< "Translational Positions" << std::endl;
-    printVector(sys1.getPos());
+    // std::cout<< "Translational Positions" << std::endl;
+    // printVector(sys1.getPos());
 
-    std::cout<< "Translational Velocities" << std::endl;
-    printVector(sys1.getVel());
+    // std::cout<< "Translational Velocities" << std::endl;
+    // printVector(sys1.getVel());
 
-    std::cout<< "Angular Positions" << std::endl;
-    printVector(sys1.getAngPos());
+    // std::cout<< "Angular Positions" << std::endl;
+    // printVector(sys1.getAngPos());
 
-    std::cout<< "Angular Velocities" << std::endl;
-    printVector(sys1.getAngVel());
+    // std::cout<< "Angular Velocities" << std::endl;
+    // printVector(sys1.getAngVel());
     
     return 0;
 }
