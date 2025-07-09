@@ -36,7 +36,7 @@ public:
         this->forceList = forceList;
         pos = iniPos;
         vel = iniVel;
-        this->torqueList = torqueList,
+        this->torqueList = torqueList;
         angPos = iniAngPos;
         angVel = iniAngVel;
     }
@@ -53,4 +53,4 @@ public:
     std::vector<float> getAngPos() {return angPos;}
     std::vector<float> getAngVel() {return angVel;}
 
-}
+};
